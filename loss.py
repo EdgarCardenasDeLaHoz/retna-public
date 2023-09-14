@@ -18,7 +18,7 @@ def calc_loss(pred, target, method=None, select_channel=None):
     loss = loss.mean()       
     return loss
 
-def dice_loss(pred, target, smooth = .0001):
+def dice_loss(pred, target, smooth = .1):
 
     if pred.ndim == 3: pred = pred[None,:]
     if target.ndim == 3: target = target[None,:]
